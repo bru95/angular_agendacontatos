@@ -26,7 +26,7 @@ import { ModalContactComponent } from './features/modal-contact/modal-contact.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationDialogComponent } from './features/confirmation-dialog/confirmation-dialog.component';
 import { HeaderContentList } from './features/header-content-list/header-content-list.component';
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
