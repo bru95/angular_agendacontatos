@@ -1,0 +1,9 @@
+<button mat-button color="accent" (click)="openDialogForm($event)" *ngIf='contacts.length > 0'>
+    <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+    Novo contato
+</button>
+<div  class="center-box" *ngIf='contacts.length == 0'>
+    <h4>Você não possui contatos em sua agenda.</h4>
+    <button mat-button color="accent" class="rounded-borders" (click)="openDialogForm($event)">Cadastre um novo
+        contato!</button>
+</div>

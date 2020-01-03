@@ -1,0 +1,6 @@
+<app-header></app-header>
+<app-search (searchInputEvent)="filterContacts($event)"></app-search>
+<section class="container">
+    <app-header-content-list [contacts]="contacts"></app-header-content-list>
+    <app-contact-list *ngIf='filteredContacts.length > 0' [contacts]="filteredContacts"></app-contact-list>
+</section>

@@ -1,0 +1,22 @@
+<div id="modal-content-wrapper">
+    <header class="modal-header">
+        <h3>Novo Contato</h3>
+    </header>
+    <section class="modal-body">
+        <form method="POST" (ngSubmit)="createContact()" [formGroup]="form">
+            <mat-form-field class="inputControl">
+                <input matInput placeholder="Nome" id="name" name="name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field class="inputControl">
+                <input matInput placeholder="E-Mail" id="email" name="email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field class="inputControl">
+                <input matInput placeholder="Telefone" id="phone" name="phone" formControlName="phone"  [ngModel]="phoneNumber" mask="{{ phoneMask }}" (ngModelChange)="phoneNumber=$event; onPhoneChanged();">
+            </mat-form-field>
+            <button mat-raised-button type="submit" class="modal-action-button" [disabled]="form.invalid">Salvar</button>
+        </form>
+    </section>
+    <footer class="modal-footer">
+        <button mat-raised-button class="modal-cancel-button" (click)="close()">Fechar</button>
+    </footer>
+</div>

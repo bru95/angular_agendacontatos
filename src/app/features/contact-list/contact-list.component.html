@@ -1,0 +1,7 @@
+<div>
+    <mat-grid-list cols="4" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let contact of contacts; index as i" class="card-item">
+            <app-contact-box [contact]="contact" class="box"></app-contact-box>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
